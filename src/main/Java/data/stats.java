@@ -11,11 +11,10 @@ public class stats
    private int intel;
    private int wis;
    private int cha;
-   private long Id;
 
       //this is an Object 'stat'. while the above declarations of variables are private this public object
       // allows them to be grouped and used elsewhere in the program.
-   public stats (int str, int dex, int con, int intel, int wis, int cha, long Id)
+   public stats (int str, int dex, int con, int intel, int wis, int cha)
    {
       this.str = str;
       this.dex = dex;
@@ -23,7 +22,6 @@ public class stats
       this.intel = intel;
       this.wis = wis;
       this.cha = cha;
-      this.Id =Id;
    }
 
       // Here are the getters and setters
@@ -76,11 +74,5 @@ public class stats
       this.cha = cha;
    }
 
-   public long getId() {
-      return Id;
-   }
 
-   public void setId(long id) {
-      this.Id = id;
-   }
 }

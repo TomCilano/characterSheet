@@ -27,8 +27,7 @@ public class createCharacterServlet extends HttpServlet {
         String name = req.getParameter("name");
         String race = req.getParameter("race");
         String type = req.getParameter("type");
-        //This one if from a separate class, don't know if this will work.
-        String str = req.getParameter("Id");
+        String Id = req.getParameter("Id");
 
         // use session to save the session
         HttpSession session = req.getSession();
@@ -42,12 +41,16 @@ public class createCharacterServlet extends HttpServlet {
 
         //make a new character and stats object
 
-        character myCharacter = new character(name, race, type);
+        /////something is wrong
+        character myCharacter = new character(name, race, type, Long.parseLong(Id));
         characterList.add(myCharacter);
-
 
                 // now im going save the list
         session.setAttribute("characterList", characterList);
+
+            //this should be the result page
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/index.jsp");
+        dispatcher.forward(req,resp);
 
 
 

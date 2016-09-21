@@ -1,8 +1,5 @@
 package data;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Tom on 9/21/16.
  */
@@ -11,15 +8,18 @@ public class character {
    private String name;
    private String race;
    private String type;
+   private long Id;
 
    // declare object... method
-   public character(String name, String race, String type)
+   public character(String name, String race, String type, long Id)
    {
 
-       this.name = name;
-       this.race = race;
-       this.type = type;
+      this.name = name;
+      this.race = race;
+      this.type = type;
+      this.Id = Id;
    }
+
 
    public String getName() {
       return name;
@@ -43,5 +43,14 @@ public class character {
 
    public void setType(String type) {
       this.type = type;
+   }
+
+   public void setId(long Id) {
+      this.Id = Id;
+   }
+
+
+   public long getId() {
+      return Id;
    }
 }
