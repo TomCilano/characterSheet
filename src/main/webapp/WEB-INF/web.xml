@@ -6,12 +6,34 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>createCharacterServlet</servlet-name>
-    <servlet-class>servlets.createCharacterServlet</servlet-class>
+    <servlet-name>CreateCharacterServlet</servlet-name>
+    <servlet-class>servlets.CreateCharacterServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>createCharacterServlet</servlet-name>
-    <url-pattern>/data</url-pattern>
+    <servlet-name>CreateCharacterServlet</servlet-name>
+    <url-pattern>/createCharacter</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteCharacterServlet</servlet-name>
+    <servlet-class>servlets.DeleteCharacterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeleteCharacterServlet</servlet-name>
+    <url-pattern>/deleteCharacter</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>selectCharacterServlet</servlet-name>
+    <servlet-class>servlets.SelectCharacterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>selectCharacterServlet</servlet-name>
+    <url-pattern>/selectCharacter</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>

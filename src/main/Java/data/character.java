@@ -8,16 +8,16 @@ public class character {
    private String name;
    private String race;
    private String type;
-   private long Id;
+   private long id;
 
-   // declare object... method
-   public character(String name, String race, String type, long Id)
+
+   public character(String name, String race, String type, long id)
    {
 
       this.name = name;
       this.race = race;
       this.type = type;
-      this.Id = Id;
+      this.id = id;
    }
 
 
@@ -45,12 +45,10 @@ public class character {
       this.type = type;
    }
 
-   public void setId(long Id) {
-      this.Id = Id;
+   public void setId(long id) {
+      this.id = id;
    }
-
-
    public long getId() {
-      return Id;
+      return id;
    }
 }
