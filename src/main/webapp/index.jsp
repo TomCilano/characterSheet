@@ -23,7 +23,7 @@
             background-color: sandybrown;
         }
     </style>
-    <title>Title</title>
+    <title>Character Sheet</title>
 </head>
 <body background="https://s-media-cache-ak0.pinimg.com/564x/2c/7f/6d/2c7f6dcd15a756e2f0885212b52ea6c7.jpg">
 <center><h1><u><b><font face="Century Gothic">Create Your Character</font></b></u></h1></center>
@@ -37,12 +37,12 @@
             <td><input type="text" name="name" value="<c:out value="${selectedcharacter.name}"/>"></td></tr>
         <tr><td>Character Race:</td> <td><input type="text" name="race" value="<c:out value="${selectedcharacter.race}"/>"></td></tr>
         <tr><td>Character Class:</td> <td><input type="text" name="type" value="<c:out value="${selectedcharacter.type}"/>"></td></tr>
-        <tr><td>Character ID:</td> <td><input type="text" name="Id" value="<c:out value="${selectedcharacter.id}"/>"></td></tr>
+        <tr><td>Character ID:</td> <td><input type="text" name="id" value="<c:out value="${selectedcharacter.id}"/>"></td></tr>
     </table>
     <input type="submit" value="Save">
 </form></center>
-
-<center><b><u>Character Sheets</u></b></center>
+<center><b><h2><u>Character Sheets</u></h2></b></center>
+<center>(click row name to sort!)</center>
 <center><table class="sortable">
         <thead>
         <tr>
@@ -56,7 +56,7 @@
     <c:forEach items="${thecharacterList}" var="character">
         <tr><td><a href="/myWeb/selectCharacter?id=<c:out value="${character.id}"/>">EDIT</a> </td><td><c:out value="${character.name}"/></td><td><c:out value="${character.race}"/></td><td><c:out value="${character.type}"/></td><td><a href="/myWeb/deleteCharacter?delete=<c:out value="${character.id}"/>">DELETE</a> </td></tr>
     </c:forEach>
-</table></center>
 
+</table></center>
 </body>
 </html>

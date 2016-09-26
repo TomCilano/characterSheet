@@ -36,9 +36,9 @@ public class CreateCharacterServlet extends HttpServlet {
 
         character foundCharacter = null;
 
-       //checks if the list is populated
+        //checks if the list is populated
         if (characterList == null){
-            characterList = new ArrayList<character>();
+            characterList = new ArrayList<>();
         }
 
         //iterates through the list checking for Ids
@@ -71,13 +71,12 @@ public class CreateCharacterServlet extends HttpServlet {
         dispatcher.forward(req, resp);
 
     }
-
-        @Override
-        protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-        {
-            RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/index.jsp");
-            dispatcher.forward(req, resp);
-        }
+    @Override
+    protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/index.jsp");
+        dispatcher.forward(req, resp);
+    }
 
 
 }

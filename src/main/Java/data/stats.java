@@ -1,9 +1,9 @@
-/*package data;
+package data;
 
 /**
  * Created by Tom on 9/21/16.
  */
-/*public class stats
+public class stats
 {
    private int str;
    private int dex;
@@ -76,4 +76,3 @@
 
 
 }
-*/
